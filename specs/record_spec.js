@@ -3,7 +3,7 @@ var Record = require('../Record.js')
 
 
 
-describe('Array tasks', function () {
+describe('Record', function () {
 
 let record;
 
