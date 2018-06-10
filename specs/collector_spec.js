@@ -40,5 +40,4 @@ beforeEach(function(){
 
   });
   xit("should be able to compare the value of their collection with another RecordCollector", function(){
-
   });
