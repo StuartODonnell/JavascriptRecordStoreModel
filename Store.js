@@ -5,4 +5,7 @@ const Store = function(name, city){
 
 };
 
+Store.prototype.addRecordToInventory = function (record) {
+  this.inventory.push(record);
+}
 module.exports = Store;

@@ -26,4 +26,9 @@ it("should have an empty inventory", function(){
 assert.strictEqual(store.inventory.length, 0);
 })
 
+it("should add a record to a store inventory", function(){
+  store.addRecordToInventory(record1);
+  assert.strictEqual(store.inventory.length, 1);
+})
+
 })
