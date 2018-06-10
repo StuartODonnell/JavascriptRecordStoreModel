@@ -18,7 +18,7 @@ it("should have a name", function(){
 assert.strictEqual(store.name, "World Records");
 });
 
-xit("should have a city", function(){
+it("should have a city", function(){
 assert.strictEqual(store.city, "Kalamazoo");
 })
 
