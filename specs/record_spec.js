@@ -15,12 +15,11 @@ beforeEach(function(){
   })
 
 it("should have an artist", function(){
-record1 = new Record("Fugees", "The Score", "Hip-Hop", 10)
 assert.strictEqual(record1.artist, "Fugees");
 });
 
-xit("should have a title", function(){
-
+it("should have a title", function(){
+assert.strictEqual(record2.title, "Black Sunday");
 })
 xit("should have a genre", function(){
 
