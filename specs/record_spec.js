@@ -21,8 +21,9 @@ assert.strictEqual(record1.artist, "Fugees");
 it("should have a title", function(){
 assert.strictEqual(record2.title, "Black Sunday");
 })
-xit("should have a genre", function(){
 
+it("should have a genre", function(){
+assert.strictEqual(record3.genre, "Dance");
 })
 xit("should have a price", function(){
 
