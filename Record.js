@@ -5,7 +5,7 @@ const Record = function(artist, title, genre, price){
   this.price = price;
 };
 
-Record.prototype.showRecordPropertiesAsString = function(record){
+Record.prototype.showRecordPropertiesAsString = function(){
 return this.artist+", " + this.title+", " + this.genre+", " + this.price;
 }
 

@@ -12,6 +12,7 @@ beforeEach(function(){
     record2 = new Record("Cypress Hill", "Black Sunday", "Hip-Hop", 13);
     record3 = new Record("Prodigy", "Music For A Jilted Generation", "Dance", 9);
     record4 = new Record("Beck", "Odelay", "Alternative", 15);
+    record5 = new Record("1", "2", "3", 4)
   })
 
 it("should have a name", function(){
@@ -33,6 +34,17 @@ it("should add a record to a store inventory", function(){
 
 it("should have a balance", function(){
   assert.strictEqual(store.balance, 100);
+})
+
+it("should return inventory as a list", function(){
+
+  store.addRecordToInventory(record1);
+  store.addRecordToInventory(record2);
+  store.addRecordToInventory(record3);
+  store.addRecordToInventory(record4);
+  store.addRecordToInventory(record5);
+
+  assert.deepStrictEqual(store.listInventory(), [record1.showRecordPropertiesAsString(), record2.showRecordPropertiesAsString(), record3.showRecordPropertiesAsString(), record4.showRecordPropertiesAsString(), record5.showRecordPropertiesAsString()])
 })
 
 })
