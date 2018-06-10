@@ -60,10 +60,17 @@ it("should return the value of balance and records stock", function(){
   store.addRecordToInventory(record4);
   store.addRecordToInventory(record5);
 
-
   assert.strictEqual(store.calculatedValue(), 314);
 
+})
 
+it ("should return all the records on a specific genre", function(){
+  store.addRecordToInventory(record1);
+  store.addRecordToInventory(record2);
+  store.addRecordToInventory(record3);
+  store.addRecordToInventory(record4);
+  store.addRecordToInventory(record5);
+  assert.deepStrictEqual(store.findByGenre("Hip-Hop"), [record1, record2]);
 })
 
 })

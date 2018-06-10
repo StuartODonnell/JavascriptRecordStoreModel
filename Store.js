@@ -22,8 +22,18 @@ Store.prototype.sellRecord = function(record){
 
 
 Store.prototype.calculatedValue = function () {
-  return this.inventory.reduce( (accumulator, record) => { return accumulator += record.price }, this.balance )
+  return this.inventory.reduce( (accumulator, record) =>
+  { return accumulator += record.price }, this.balance )
 };
 
+Store.prototype.findByGenre = function (genre) {
+  return this.inventory.filter( record => record.genre
+    === genre)
+};
 
+// var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+//
+// const result = words.filter(word => word.length > 6);
+//
+// console.log(result);
 module.exports = Store;
