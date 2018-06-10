@@ -47,4 +47,12 @@ it("should return inventory as a list", function(){
   assert.deepStrictEqual(store.listInventory(), [record1.showRecordPropertiesAsString(), record2.showRecordPropertiesAsString(), record3.showRecordPropertiesAsString(), record4.showRecordPropertiesAsString(), record5.showRecordPropertiesAsString()])
 })
 
+it('balance can increase when selling record', function() {
+  store.balance = 0;
+  store.sellRecord(record1);
+  assert.strictEqual(store.balance, 10);
+
+
+})
+
 })
