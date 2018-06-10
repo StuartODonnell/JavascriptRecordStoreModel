@@ -15,18 +15,19 @@ beforeEach(function(){
   })
 
 it("should have an artist", function(){
-assert.strictEqual(record1.artist, "Fugees");
+assert.strictEqual(record2.artist, "Cypress Hill");
 });
 
 it("should have a title", function(){
-assert.strictEqual(record2.title, "Black Sunday");
+assert.strictEqual(record3.title, "Music For A Jilted Generation");
 })
 
 it("should have a genre", function(){
-assert.strictEqual(record3.genre, "Dance");
+assert.strictEqual(record4.genre, "Alternative");
 })
-xit("should have a price", function(){
 
+it("should have a price", function(){
+assert.strictEqual(record1.price, 10);
 })
 
 
