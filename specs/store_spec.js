@@ -22,8 +22,8 @@ it("should have a city", function(){
 assert.strictEqual(store.city, "Kalamazoo");
 })
 
-xit("should have an empty inventory", function(){
-assert.strictEqual(store.inventory, 0);
+it("should have an empty inventory", function(){
+assert.strictEqual(store.inventory.length, 0);
 })
 
 })
