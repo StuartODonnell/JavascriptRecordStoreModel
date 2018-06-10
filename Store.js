@@ -21,4 +21,9 @@ Store.prototype.sellRecord = function(record){
 };
 
 
+Store.prototype.calculatedValue = function () {
+  return this.inventory.reduce( (accumulator, record) => { return accumulator += record.price }, this.balance )
+};
+
+
 module.exports = Store;
