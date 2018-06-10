@@ -17,7 +17,7 @@ beforeEach(function(){
     record1 = new Record("Run The Jewels", "Run The Jewels: III", "Hip-Hop", 18);
     record2 = new Record("Dr. Dre", "THe Chronic", "Hip-Hop", 13);
     record3 = new Record("Faithless", "Reverence", "Dance", 9);
-    record4 = new Record("The Offspring", "Ixnay On The Hombre", "Alternative", 15);
+    record4 = new Record("Soundgarden", "Superunknown", "Alt-Metal", 15);
     record5 = new Record("Van Morrison", "Into The Mystic", "Jazz", 25);
   })
 
