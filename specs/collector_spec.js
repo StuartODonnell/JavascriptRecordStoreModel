@@ -33,6 +33,15 @@ beforeEach(function(){
     assert.strictEqual(collector1.collection.length, 2);
   });
 
+it("should remove a record from collection", function(){
+  collector1.addRecordToCollection(record1);
+  collector1.addRecordToCollection(record2);
+  collector1.addRecordToCollection(record3);
+  collector1.removeRecordFromCollection(record1);
+  assert.strictEqual(collector1.collection.length, 2);
+})
+
+
 
 
   xit("should have cash that decreases with buying a record", function(){

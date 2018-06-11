@@ -8,6 +8,15 @@ this.collection.push(record);
 
 }
 
+Collector.prototype.removeRecordFromCollection = function(record){
+let index = this.collection.indexOf(record);
+if(index > -1){
+  this.collection.splice(index,1);
+}
+
+}
+
+
 // Collector.protoype.buyRecord = function(record){
 //   return this.wallet -= record.price;
 // };
