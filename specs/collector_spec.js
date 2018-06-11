@@ -44,8 +44,8 @@ beforeEach(function(){
     collector1.buyRecord(record1);
     assert.strictEqual(collector1.wallet, 32);
   });
-  
-  xit("should decrease wallet when buying a record", function(){
+
+  it("should increase wallet when selling a record", function(){
     collector2.sellRecord(record2);
     assert.strictEqual(collector2.wallet, 53);
   });
