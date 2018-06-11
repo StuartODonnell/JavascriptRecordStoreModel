@@ -6,7 +6,7 @@ const Collector = function(wallet){
 Collector.prototype.addRecordToCollection = function(record){
 this.collection.push(record);
 
-}
+};
 
 Collector.prototype.removeRecordFromCollection = function(record){
 let index = this.collection.indexOf(record);
@@ -14,18 +14,18 @@ if(index > -1){
   this.collection.splice(index,1);
 }
 
-}
+};
 
 Collector.prototype.buyRecord = function(record){
-  return this.wallet -= record.price;
+  if (this.wallet >= record.price){
+    this.collection.push(record);
+    return this.wallet -= record.price;
+}
 };
 
 Collector.prototype.sellRecord = function(record){
   return this.wallet += record.price;
 };
-
-
-
 
 
 module.exports = Collector;

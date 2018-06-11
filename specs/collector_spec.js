@@ -50,8 +50,10 @@ beforeEach(function(){
     assert.strictEqual(collector2.wallet, 53);
   });
 
-  xit("shouldn't be able to buy a Record if he can't afford it", function(){
-
+  it("shouldn't be able to buy a Record if he can't afford it", function(){
+    collector2.buyRecord(record5);
+    collector2.buyRecord(record1);
+    assert.strictEqual(collector2.collection.length, 1);
   });
 
   xit("should be able to view the total value of their collection", function(){
