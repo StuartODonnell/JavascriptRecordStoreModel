@@ -27,5 +27,11 @@ Collector.prototype.sellRecord = function(record){
   return this.wallet += record.price;
 };
 
+Collector.prototype.collectionValue = function(){
+  return this.collection.reduce( (accumulator, record) =>
+{return accumulator += record.price}, 0)
+};
+
+
 
 module.exports = Collector;

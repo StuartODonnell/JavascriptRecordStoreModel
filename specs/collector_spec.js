@@ -9,7 +9,7 @@ describe('Collector', function () {
 let collector;
 
 beforeEach(function(){
-    collector1 = new Collector(50);
+    collector1 = new Collector(5000);
     collector2 = new Collector(40);
     store = new Store("World Records", "Kalamazoo", 100)
     record1 = new Record("Run The Jewels", "Run The Jewels: III", "Hip-Hop", 18);
@@ -20,7 +20,7 @@ beforeEach(function(){
   })
 
   it("should have wallet", function(){
-    assert.strictEqual(collector1.wallet, 50);
+    assert.strictEqual(collector1.wallet, 5000);
   });
 
   it("should have an emplty record collection", function(){
@@ -42,7 +42,7 @@ beforeEach(function(){
 
   it("should decrease wallet when buying a record", function(){
     collector1.buyRecord(record1);
-    assert.strictEqual(collector1.wallet, 32);
+    assert.strictEqual(collector1.wallet, 4982);
   });
 
   it("should increase wallet when selling a record", function(){
@@ -56,7 +56,13 @@ beforeEach(function(){
     assert.strictEqual(collector2.collection.length, 1);
   });
 
-  xit("should be able to view the total value of their collection", function(){
+  it("should be able to view the total value of their collection", function(){
+    collector1.buyRecord(record1);
+    collector1.buyRecord(record2);
+    collector1.buyRecord(record3);
+    collector1.buyRecord(record4);
+    collector1.buyRecord(record5);
+    assert.strictEqual(collector1.collectionValue(), 80)
 
   });
 
