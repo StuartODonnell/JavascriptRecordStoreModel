@@ -33,40 +33,43 @@ beforeEach(function(){
     assert.strictEqual(collector1.collection.length, 2);
   });
 
-it("should remove a record from collection", function(){
-  collector1.addRecordToCollection(record1);
-  collector1.addRecordToCollection(record2);
-  collector1.addRecordToCollection(record3);
-  collector1.removeRecordFromCollection(record1);
-  assert.strictEqual(collector1.collection.length, 2);
-})
+  it("should remove a record from collection", function(){
+    collector1.addRecordToCollection(record1);
+    collector1.addRecordToCollection(record2);
+    collector1.removeRecordFromCollection(record1);
+    assert.strictEqual(collector1.collection.length, 1);
+  })
 
-
-
-
-  xit("should have cash that decreases with buying a record", function(){
+  it("should decrease wallet when buying a record", function(){
     collector1.buyRecord(record1);
     assert.strictEqual(collector1.wallet, 32);
   });
-  xit("should have cash that increases with selling a record", function(){
+  
+  xit("should decrease wallet when buying a record", function(){
     collector2.sellRecord(record2);
     assert.strictEqual(collector2.wallet, 53);
   });
+
   xit("shouldn't be able to buy a Record if he can't afford it", function(){
 
   });
+
   xit("should be able to view the total value of their collection", function(){
 
   });
+
   xit("should be able to view the total value of all records of a given Genre", function(){
 
   });
+
   xit("should be able to view their most valuable record.", function(){
 
   });
+
   xit("should be able to sort their records by value. (ascending or descending)", function(){
 
   });
+
   xit("should be able to compare the value of their collection with another RecordCollector", function(){
   });
 

@@ -17,9 +17,9 @@ if(index > -1){
 }
 
 
-// Collector.protoype.buyRecord = function(record){
-//   return this.wallet -= record.price;
-// };
+Collector.prototype.buyRecord = function(record){
+  return this.wallet -= record.price;
+};
 
 // Collector.protoype.sellRecord = function(record){
 //   return this.wallet += record.price;
