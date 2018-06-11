@@ -24,7 +24,13 @@ beforeEach(function(){
   });
 
   it("should have an emplty record collection", function(){
-    assert.strictEqual(collector2.collection.length, 0)
+    assert.strictEqual(collector2.collection.length, 0);
+  });
+
+  it("should add a record to collection", function(){
+    collector1.addRecordToCollection(record1);
+    collector1.addRecordToCollection(record2);
+    assert.strictEqual(collector1.collection.length, 2);
   });
 
 

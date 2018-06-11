@@ -3,6 +3,11 @@ const Collector = function(wallet){
   this.collection = [];
 };
 
+Collector.prototype.addRecordToCollection = function(record){
+this.collection.push(record);
+
+}
+
 // Collector.protoype.buyRecord = function(record){
 //   return this.wallet -= record.price;
 // };
