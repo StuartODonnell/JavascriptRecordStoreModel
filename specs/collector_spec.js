@@ -78,17 +78,31 @@ beforeEach(function(){
     collector1.buyRecord(record1);
     collector1.buyRecord(record2);
     collector1.buyRecord(record3);
+    assert.deepStrictEqual(collector1.findRecordsValueByGenre("Hip-Hop"), 31)
   });
 
   xit("should be able to view their most valuable record.", function(){
-
+    collector1.buyRecord(record1);
+    collector1.buyRecord(record2);
+    collector1.buyRecord(record3);
+    assert.deepStrictEqual(collector1.mostValuableRecord(), record1)
   });
 
   xit("should be able to sort their records by value. (ascending or descending)", function(){
-
+    collector1.buyRecord(record1);
+    collector1.buyRecord(record2);
+    collector1.buyRecord(record3);
+    assert.deepStrictEqual(collector1.collectionAscendingValue(), [record3,record2,record1])
   });
 
   xit("should be able to compare the value of their collection with another RecordCollector", function(){
+    collector1.buyRecord(record1);
+    collector1.buyRecord(record2);
+    collector2.buyRecord(record3);
+    collector2.buyRecord(record4);
+    collector2.buyRecord(record5);
+    assert.deepStrictEqual(collector.compare(collector1, collector2), result???)
   });
+
 
 })

@@ -32,21 +32,13 @@ Collector.prototype.collectionValue = function(){
 {return accumulator += record.price}, 0)
 };
 
-// Collector.prototype.findRecordsByGenre = function(record) {
-//   let foundRecords = [];
-//
-//   this.collection.forEach(function(genre) {
-//     if (record.genre === genre) {
-//       foundRecords.push(record);
-//     }
-//   })
-//
-//   return foundRecords;
-// };
-
 Collector.prototype.findRecordsByGenre = function (genre) {
   return this.collection.filter( record => record.genre
     === genre)
 };
+
+
+
+
 
 module.exports = Collector;

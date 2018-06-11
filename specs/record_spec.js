@@ -21,24 +21,19 @@ assert.strictEqual(record2.artist, "Cypress Hill");
 
 it("should have a title", function(){
 assert.strictEqual(record3.title, "Music For A Jilted Generation");
-})
+});
 
 it("should have a genre", function(){
 assert.strictEqual(record4.genre, "Alternative");
-})
+});
 
 it("should have a price", function(){
 assert.strictEqual(record1.price, 10);
-})
+});
 
 it("should return all record properties as a string", function(){
   assert.strictEqual(record5.showRecordPropertiesAsString(), "1, 2, 3, 4");
-})
+});
 
 
-
-
-
-
-
-})
+});
