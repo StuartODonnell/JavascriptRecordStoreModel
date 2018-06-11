@@ -13,7 +13,7 @@ beforeEach(function(){
     collector2 = new Collector(40);
     store = new Store("World Records", "Kalamazoo", 100)
     record1 = new Record("Run The Jewels", "Run The Jewels: III", "Hip-Hop", 18);
-    record2 = new Record("Dr. Dre", "THe Chronic", "Hip-Hop", 13);
+    record2 = new Record("Dr. Dre", "The Chronic", "Hip-Hop", 13);
     record3 = new Record("Faithless", "Reverence", "Dance", 9);
     record4 = new Record("Soundgarden", "Superunknown", "Alt-Metal", 15);
     record5 = new Record("Van Morrison", "Into The Mystic", "Jazz", 25);
@@ -66,8 +66,18 @@ beforeEach(function(){
 
   });
 
-  xit("should be able to view the total value of all records of a given Genre", function(){
+  it("should be able to view the all records of a given Genre", function(){
+    collector1.buyRecord(record1);
+    collector1.buyRecord(record2);
+    collector1.buyRecord(record3);
+    assert.deepStrictEqual(collector1.findRecordsByGenre("Hip-Hop"), [record1, record2])
 
+  });
+
+  xit("should be able to view the total value of all records of a given Genre", function(){
+    collector1.buyRecord(record1);
+    collector1.buyRecord(record2);
+    collector1.buyRecord(record3);
   });
 
   xit("should be able to view their most valuable record.", function(){
