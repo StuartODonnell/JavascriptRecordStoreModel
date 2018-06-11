@@ -1,9 +1,7 @@
 var assert = require('assert')
-var Record = require('../Collector.js')
-var Record = require('../Store.js')
+var Collector = require('../Collector.js')
+var Store = require('../Store.js')
 var Record = require('../Record.js')
-
-
 
 
 describe('Collector', function () {
@@ -21,8 +19,23 @@ beforeEach(function(){
     record5 = new Record("Van Morrison", "Into The Mystic", "Jazz", 25);
   })
 
-  xit("should have cash that increase and decreases with buying and selling", function(){
+  it("should have wallet", function(){
+    assert.strictEqual(collector1.wallet, 50);
+  });
 
+  it("should have an emplty record collection", function(){
+    assert.strictEqual(collector2.collection.length, 0)
+  });
+
+
+
+  xit("should have cash that decreases with buying a record", function(){
+    collector1.buyRecord(record1);
+    assert.strictEqual(collector1.wallet, 32);
+  });
+  xit("should have cash that increases with selling a record", function(){
+    collector2.sellRecord(record2);
+    assert.strictEqual(collector2.wallet, 53);
   });
   xit("shouldn't be able to buy a Record if he can't afford it", function(){
 
@@ -41,3 +54,5 @@ beforeEach(function(){
   });
   xit("should be able to compare the value of their collection with another RecordCollector", function(){
   });
+
+})

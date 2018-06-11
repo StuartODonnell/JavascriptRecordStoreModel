@@ -18,7 +18,7 @@ Store.prototype.listInventory = function(){
 
 Store.prototype.sellRecord = function(record){
   return this.balance += record.price;
-};
+}; 
 
 
 Store.prototype.calculatedValue = function () {
